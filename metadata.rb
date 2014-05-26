@@ -1,4 +1,4 @@
-name             "flashprojector"
+name             "chef-flashprojector"
 maintainer       "Andrew Kerr"
 maintainer_email "andrew@ajk-solutions.com"
 description      "Cookbook for installing the Linux Flash Player 11.2 Projector"
