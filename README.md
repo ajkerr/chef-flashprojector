@@ -18,7 +18,15 @@ NONE
 Usage
 =====
 
-Simply include the recipe in your Chef cookbook or role file.
+Include the recipe in your Chef cookbook or role file.
+
+The attributes used by this cookbook are under the `flashprojector` name space.
+
+Attribute        | Description |Type | Default
+-----------------|-------------|-----|--------
+tarfile          | URL to Flash Player Projector Content Debugger | String | http://fpdownload.macromedia.com/pub/flashplayer/updaters/11/flashplayer_11_sa_debug.i386.tar.gz
+ci_user          | The operating system user that is used to run your CI tests.  The cookbook assumes that this user already exists. | String | ci
+ci_group         | The operating system group for the user that is used to run your CI tests.  The cookbook assumes that this group already exists. | String | web
 
 License and Author
 ==================
