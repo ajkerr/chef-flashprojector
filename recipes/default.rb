@@ -8,9 +8,19 @@
 
 # Adobe never released a 64-bit standalone projector, so we need to install
 # support for 32-bit executables.
-package "libgd2-xpm:i386"
-package "libgphoto2-2:i386"
-package "ia32-libs-multiarch"
+bash 'Enable 32-bit executables' do
+  code <<-EOH
+  dpkg --add-architecture i386
+  apt-get update
+  EOH
+  only_if { platform?("ubuntu") && node[:platform_version].to_f >= 14.04 }
+end
+
+node[:flashprojector][:packages].each do |pkg|
+  package pkg do
+    action :install
+  end
+end
 
 # FlexUnit runs the projector in a VNC server.
 package "vnc4server"

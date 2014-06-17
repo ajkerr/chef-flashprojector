@@ -4,7 +4,7 @@ maintainer_email "andrew@ajk-solutions.com"
 description      "Cookbook for installing the Linux Flash Player 11.2 Projector"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 license          "MIT"
-version          "0.0.1"
+version          "0.1.0"
 
 %w{ }.each do |cb|
   depends cb

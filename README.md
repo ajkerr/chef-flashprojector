@@ -7,9 +7,9 @@ for running FlexUnit tests on a headless continuous integration server.
 Requirements
 ============
 
-Platform:
+Platforms:
 
-* Ubuntu 12.04.4
+* Ubuntu 12.04.4, 14.04
 
 The following cookbooks are dependencies:
 
@@ -27,6 +27,7 @@ Attribute        | Description |Type | Default
 tarfile          | URL to Flash Player Projector Content Debugger | String | http://fpdownload.macromedia.com/pub/flashplayer/updaters/11/flashplayer_11_sa_debug.i386.tar.gz
 ci_user          | The operating system user that is used to run your CI tests.  The cookbook assumes that this user already exists. | String | ci
 ci_group         | The operating system group for the user that is used to run your CI tests.  The cookbook assumes that this group already exists. | String | web
+packages         | The packages that need to be installed for the Flash Player to run. | String | Varies by Ubuntu version
 
 License and Author
 ==================
