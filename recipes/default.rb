@@ -40,6 +40,13 @@ cookbook_file "/home/#{node[:flashprojector][:ci_user]}/.vnc/passwd" do
   mode "0600"
 end
 
+cookbook_file "/home/#{node[:flashprojector][:ci_user]}/mm.cfg" do
+  source "mm.cfg"
+  owner node[:flashprojector][:ci_user]
+  group node[:flashprojector][:ci_group]
+  mode "0644"
+end
+
 # Download the Flash Projector
 remote_file "#{Chef::Config[:file_cache_path]}/flashprojector.tar.gz" do
   source node[:flashprojector][:tarfile]

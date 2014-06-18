@@ -16,7 +16,8 @@ if platform?("ubuntu") && node[:platform_version].to_f >= 14.04
 		'libglib2.0-0:i386',
 		'libxt6:i386',
 		'libgtk2.0-0:i386',
-		'libnss3:i386'
+		'libnss3:i386',
+		'libcurl3:i386'
 	]
 else
 	default[:flashprojector][:packages] = [

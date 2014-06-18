@@ -27,5 +27,5 @@
   "recipes": {
     "flashprojector::default": "Installs the Linux Flash Player 11.2 Projector"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
